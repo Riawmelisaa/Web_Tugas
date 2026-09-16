@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Diri - Ria Melisa</title>
+    <meta name="description" content="Halaman profil diri Ria Melisa, mahasiswi Teknik Informatika semester 5.">
+    <meta property="og:title" content="Profil Diri - Ria Melisa">
+    <meta property="og:description" content="Profil diri, biodata, dan daftar mata kuliah semester ini.">
+    <meta property="og:image" content="foto.jpg">
+    <style>
+        :root {
+            --bg-1: #eef7ff;
+            --bg-2: #f3ecff;
+            --card: rgba(255, 255, 255, 0.9);
+            --primary: #2d4f8a;
+            --primary-dark: #1d3557;
+            --accent: #8b5cf6;
+            --text: #1f2937;
+            --muted: #5f6b7a;
+            --border: #dce7f3;
+            --shadow: 0 16px 35px rgba(53, 77, 119, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 0.92rem;
+            line-height: 1.55;
+            margin: 0;
+            padding: 30px 20px;
+            color: var(--text);
+            background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            background: var(--card);
+            backdrop-filter: blur(8px);
+            padding: 28px;
+            border-radius: 22px;
+            box-shadow: var(--shadow);
+        }
+
+        nav {
+            margin-bottom: 22px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 6px 0;
+            transition: 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        header {
+            text-align: center;
+            padding: 25px 0 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-photo {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #ffffff;
+            box-shadow: 0 12px 24px rgba(96, 112, 150, 0.2);
+            display: block;
+            margin: 0 auto 16px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-dark);
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: clamp(1.7rem, 2.6vw, 2.25rem);
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+            margin-bottom: 12px;
+        }
+
+        h3 {
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            color: var(--muted);
+        }
+
+        p {
+            margin: 0.35rem 0;
+        }
+
+        section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .subtitle {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        section {
+            margin-top: 28px;
+            padding: 20px 18px;
+            background: rgba(255, 255, 255, 0.65);
+            border-radius: 18px;
+            border-top: 1px solid var(--border);
+        }
+
+        .biodata-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .biodata-list li {
+            padding: 5px 0;
+        }
+
+        .biodata-list li:last-child {
+            border-bottom: 0;
+        }
+
+        .biodata-list strong {
+            color: var(--primary-dark);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        #matakuliah {
+            overflow-x: visible;
+        }
+
+        th, td {
+            border: 1px solid var(--border);
+            padding: 10px 8px;
+            font-size: 0.86rem;
+            text-align: left;
+            vertical-align: top;
+            overflow-wrap: anywhere;
+        }
+
+        th {
+            background: linear-gradient(135deg, #edf4ff, #eae7ff);
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: rgba(139, 92, 246, 0.03);
+        }
+
+        a {
+            color: var(--primary);
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        .social-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .social-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 12px;
+            border-radius: 12px;
+            text-decoration: none;
+            background: linear-gradient(135deg, #eff6ff, #f4f0ff);
+            color: var(--primary-dark);
+            font-size: 0.86rem;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .social-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 18px rgba(45, 79, 138, 0.12);
+        }
+
+        .social-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            color: white;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 18px;
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 18px 12px;
+            }
+
+            .container {
+                padding: 18px 14px;
+                border-radius: 16px;
+            }
+
+            nav {
+                gap: 5px;
+                padding: 8px 0;
+            }
+
+            nav a {
+                padding: 5px 0;
+                font-size: 0.7rem;
+            }
+
+            section {
+                padding: 16px 12px;
+            }
+
+            table {
+                table-layout: fixed;
+                font-size: 0.64rem;
+            }
+
+            th,
+            td {
+                padding: 6px 3px;
+                font-size: 0.64rem;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav aria-label="Navigasi utama">
+            <a href="#foto">Profil</a> |
+            <a href="#tentang">Tentang Saya</a> |
+            <a href="#biodata">Biodata</a> |
+            <a href="#matakuliah">Mata Kuliah</a> |
+            <a href="#kontak">Kontak</a>
+        </nav>
+
+        <header>
+            <img id="foto" src="foto.jpg" alt="Foto diri Ria Melisa" class="profile-photo">
+            <h1>Ria Melisa</h1>
+            <p class="subtitle">Mahasiswa Teknik Informatika (Semester 5)</p>
+        </header>
+
+        <main>
+            <section id="tentang">
+                <h2>Tentang Saya</h2>
+                <p>Halo Saya Ria Melisa, Mahasiswa Teknik Informatika di UIN Sunan Gunung Djati Bandung.</p>
+            </section>
+
+            <section id="biodata">
+                <h2>Biodata</h2>
+                <ul class="biodata-list">
+                    <li><strong>Nama:</strong> Ria Melisa</li>
+                    <li><strong>NIM:</strong> 1247050014</li>
+                    <li><strong>Semester:</strong> 5</li>
+                    <li><strong>Jurusan:</strong> Teknik Informatika</li>
+                    <li><strong>Fakultas:</strong> Sains dan Teknologi</li>
+                    <li><strong>Universitas:</strong> UIN Sunan Gunung Djati</li>
+                </ul>
+            </section>
+
+            <section id="matakuliah">
+                <h2>Mata Kuliah Semester Ini</h2>
+                <h3>Semester 5 | Tahun Akademik 2026/2027</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Mata Kuliah</th>
+                            <th scope="col">Kelas</th>
+                            <th scope="col">SKS</th>
+                            <th scope="col">Semester</th>
+                            <th scope="col">Dosen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="No">1</td>
+                            <td data-label="Mata Kuliah">Manajemen Basis Data</td>
+                            <td data-label="Kelas">D</td>
+                            <td data-label="SKS">3</td>
+                            <td data-label="Semester">5</td>
+                            <td data-label="Dosen">Wildan Budiawan Zulfikar S.T., M.Kom.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">2</td>
+                            <td data-label="Mata Kuliah">Jaringan Komputer</td>
+                            <td data-label="Kelas">D</td>
+                            <td data-label="SKS">3</td>
+                            <td data-label="Semester">5</td>
+                            <td data-label="Dosen">Cecep Nurul Alam M.T.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">3</td>
+                            <td data-label="Mata Kuliah">Pengembangan Aplikasi Web</td>
+                            <td data-label="Kelas">D</td>
+                            <td data-label="SKS">3</td>
+                            <td data-label="Semester">5</td>
+                            <td data-label="Dosen">Muhammad Deden Firdaus ST, M.Kom.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">4</td>
+                            <td data-label="Mata Kuliah">Interaksi Manusia dan Komputer</td>
+                            <td data-label="Kelas">D</td>
+                            <td data-label="SKS">3</td>
+                            <td data-label="Semester">5</td>
+                            <td data-label="Dosen">Dr. Cevy Sigalingging S.T., M.Kom.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">5</td>
+                            <td data-label="Mata Kuliah">Intelegensi Buatan</td>
+                            <td data-label="Kelas">D</td>
+                            <td data-label="SKS">3</td>
+                            <td data-label="Semester">5</td>
+                            <td data-label="Dosen">Jumadi ST., M.CS.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">6</td>
+                            <td data-label="Mata Kuliah">Manajemen Proyek Perangkat Lunak</td>
+                            <td data-label="Kelas">D</td>
+                            <td data-label="SKS">3</td>
+                            <td data-label="Semester">5</td>
+                            <td data-label="Dosen">Agung Wahana S.E., M.T.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">7</td>
+                            <td data-label="Mata Kuliah">Pengembangan Aplikasi Mobile</td>
+                            <td data-label="Kelas">D</td>
+                            <td data-label="SKS">3</td>
+                            <td data-label="Semester">5</td>
+                            <td data-label="Dosen">H. Aldy Rialdy Atmadja M.T.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="No">8</td>
+                            <td data-label="Mata Kuliah">Kewirausahaan &amp; Etika Bisnis</td>
+                            <td data-label="Kelas">A</td>
+                            <td data-label="SKS">2</td>
+                            <td data-label="Semester">7</td>
+                            <td data-label="Dosen">Adam Farogi ST., MT.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="kontak">
+                <h2>Kontak</h2>
+                <div class="social-list">
+                    <a class="social-item" href="mailto:riamelisa30@gmail.com" aria-label="Email Ria Melisa">
+                        <span class="social-icon">✉</span>
+                        <span>Email</span>
+                    </a>
+                    <a class="social-item" href="https://www.instagram.com/_siotria?stkn=MWVnanY2NHZjaXdsaQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram Ria Melisa">
+                        <span class="social-icon">◎</span>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Ria Melisa</p>
+        </footer>
+    </div>
+</body>
+</html>
