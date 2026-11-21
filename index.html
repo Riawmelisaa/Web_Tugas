@@ -1,158 +1,193 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Diri - Ria Melisa</title>
-    <meta name="description" content="Halaman profil diri Ria Melisa, mahasiswi Teknik Informatika semester 5.">
-    <meta property="og:title" content="Profil Diri - Ria Melisa">
-    <meta property="og:description" content="Profil diri, biodata, dan daftar mata kuliah semester ini.">
-    <meta property="og:image" content="foto.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Diri - Ria Melisa</title>
+  <meta name="description" content="Halaman profil diri Ria Melisa, mahasiswi Teknik Informatika semester 5 UIN Sunan Gunung Djati Bandung: biodata, mata kuliah semester ini, dan kontak.">
+  <meta name="author" content="Ria Melisa">
+  <meta name="theme-color" content="#3d5d8a">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:title" content="Profil Diri - Ria Melisa">
+  <meta property="og:description" content="Profil diri, biodata, dan daftar mata kuliah semester ini.">
+  <meta property="og:image" content="foto.jpg">
+  <meta property="og:image:alt" content="Foto diri Ria Melisa berhijab biru memegang buket bunga di depan gedung kampus">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <nav aria-label="Navigasi utama">
-            <a href="#foto">Profil</a> |
-            <a href="#tentang">Tentang Saya</a> |
-            <a href="#biodata">Biodata</a> |
-            <a href="#matakuliah">Mata Kuliah</a> |
-            <a href="#kontak">Kontak</a>
-        </nav>
+  <a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
 
-        <header>
-            <hr>
-            <!-- Ukuran foto diubah ke rasio 3:4 (120x160) agar tidak tertarik -->
-            <img id="foto" src="foto.jpg" alt="Foto diri Ria Melisa" width="120" height="160">
-            <h1>Ria Melisa</h1>
-            <p class="subtitle">Mahasiswa Teknik Informatika (Semester 5)</p>
-        </header>
-
-        <main>
-            <hr>
-            <section id="tentang">
-                <h2>Tentang Saya</h2>
-                <p>Halo Saya Ria Melisa, Mahasiswa Teknik Informatika di UIN Sunan Gunung Djati Bandung.</p>
-            </section>
-
-            <hr>
-            <section id="biodata">
-                <h2>Biodata</h2>
-                <ul style="list-style: none; padding-left: 0;">
-                    <li><strong>Nama:</strong> Ria Melisa</li>
-                    <li><strong>NIM:</strong> 1247050014</li>
-                    <li><strong>Semester:</strong> 5</li>
-                    <li><strong>Jurusan:</strong> Teknik Informatika</li>
-                    <li><strong>Fakultas:</strong> Sains dan Teknologi</li>
-                    <li><strong>Universitas:</strong> UIN Sunan Gunung Djati</li>
-                </ul>
-            </section>
-
-            <hr>
-            <section id="matakuliah">
-                <h2>Mata Kuliah Semester Ini</h2>
-                <h3>Semester 5 | Tahun Akademik 2026/2027</h3>
-                <!-- Menambahkan border, cellpadding, dan cellspacing langsung di HTML -->
-                <table border="1" cellpadding="8" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Mata Kuliah</th>
-                            <th scope="col">Kelas</th>
-                            <th scope="col">SKS</th>
-                            <th scope="col">Semester</th>
-                            <th scope="col">Dosen</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Manajemen Basis Data</td>
-                            <td>D</td>
-                            <td>3</td>
-                            <td>5</td>
-                            <td>Wildan Budiawan Zulfikar S.T., M.Kom.</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Jaringan Komputer</td>
-                            <td>D</td>
-                            <td>3</td>
-                            <td>5</td>
-                            <td>Cecep Nurul Alam M.T.</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Pengembangan Aplikasi Web</td>
-                            <td>D</td>
-                            <td>3</td>
-                            <td>5</td>
-                            <td>Muhammad Deden Firdaus ST, M.Kom.</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Interaksi Manusia dan Komputer</td>
-                            <td>D</td>
-                            <td>3</td>
-                            <td>5</td>
-                            <td>Dr. Cevy Sigalingging S.T., M.Kom.</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Intelegensi Buatan</td>
-                            <td>D</td>
-                            <td>3</td>
-                            <td>5</td>
-                            <td>Jumadi ST., M.CS.</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Manajemen Proyek Perangkat Lunak</td>
-                            <td>D</td>
-                            <td>3</td>
-                            <td>5</td>
-                            <td>Agung Wahana S.E., M.T.</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Pengembangan Aplikasi Mobile</td>
-                            <td>D</td>
-                            <td>3</td>
-                            <td>5</td>
-                            <td>H. Aldy Rialdy Atmadja M.T.</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>Kewirausahaan &amp; Etika Bisnis</td>
-                            <td>A</td>
-                            <td>2</td>
-                            <td>7</td>
-                            <td>Adam Farogi ST., MT.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <hr>
-            <section id="kontak">
-                <h2>Kontak</h2>
-                <div>
-                    <a href="mailto:riamelisa30@gmail.com" aria-label="Email Ria Melisa">
-                        <span>✉</span>
-                        <span>Email</span>
-                    </a>
-                    <br><br>
-                    <a href="https://www.instagram.com/_siotria?stkn=MWVnanY2NHZjaXdsaQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram Ria Melisa">
-                        <span>◎</span>
-                        <span>Instagram</span>
-                    </a>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <hr>
-            <p>&copy; 2026 Ria Melisa</p>
-        </footer>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#profil">Ria Melisa</a>
+      <nav aria-label="Navigasi utama">
+        <ul class="nav-list">
+          <li><a href="#tentang">Tentang Saya</a></li>
+          <li><a href="#biodata">Biodata</a></li>
+          <li><a href="#matakuliah">Mata Kuliah</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
+
+  <main id="konten-utama" class="wrap">
+
+    <section id="profil" class="hero" aria-labelledby="judul-profil">
+      <div class="hero-banner" aria-hidden="true"></div>
+      <figure class="avatar">
+        <img src="foto.jpg" width="360" height="480"
+             alt="Ria Melisa berhijab biru muda dan berkemeja biru, memegang buket bunga di depan gedung kampus UIN Sunan Gunung Djati Bandung">
+      </figure>
+      <div class="hero-text">
+        <h1 id="judul-profil">Ria Melisa</h1>
+        <p class="subtitle">Mahasiswa Teknik Informatika, Semester 5</p>
+        <p class="campus">UIN Sunan Gunung Djati Bandung</p>
+      </div>
+    </section>
+
+    <section id="tentang" aria-labelledby="judul-tentang">
+      <h2 id="judul-tentang">Tentang Saya</h2>
+      <p>Halo, saya Ria Melisa, mahasiswa Teknik Informatika di UIN Sunan Gunung Djati Bandung. Semester ini saya belajar pengembangan web, basis data, jaringan komputer, dan beberapa mata kuliah lain yang mendukung bidang informatika.</p>
+    </section>
+
+    <section id="biodata" aria-labelledby="judul-biodata">
+      <h2 id="judul-biodata">Biodata</h2>
+      <dl class="biodata">
+        <div><dt>Nama</dt><dd>Ria Melisa</dd></div>
+        <div><dt>NIM</dt><dd>1247050014</dd></div>
+        <div><dt>Semester</dt><dd>5</dd></div>
+        <div><dt>Jurusan</dt><dd>Teknik Informatika</dd></div>
+        <div><dt>Fakultas</dt><dd>Sains dan Teknologi</dd></div>
+        <div><dt>Universitas</dt><dd>UIN Sunan Gunung Djati Bandung</dd></div>
+      </dl>
+    </section>
+
+    <section id="matakuliah" aria-labelledby="judul-matakuliah">
+      <h2 id="judul-matakuliah">Mata Kuliah Semester Ini</h2>
+      <h3>Semester 5, Tahun Akademik 2026/2027</h3>
+
+      <div class="table-scroll" role="region" aria-labelledby="judul-matakuliah" tabindex="0">
+        <table>
+          <caption class="sr-only">Daftar mata kuliah semester 5 beserta kelas, SKS, semester, dan dosen pengampu</caption>
+          <thead>
+            <tr>
+              <th scope="col" class="num">No</th>
+              <th scope="col">Mata Kuliah</th>
+              <th scope="col" class="num">Kelas</th>
+              <th scope="col" class="num">SKS</th>
+              <th scope="col" class="num">Semester</th>
+              <th scope="col">Dosen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="num">1</td>
+              <th scope="row">Manajemen Basis Data</th>
+              <td class="num">D</td>
+              <td class="num">3</td>
+              <td class="num">5</td>
+              <td>Wildan Budiawan Zulfikar S.T., M.Kom.</td>
+            </tr>
+            <tr>
+              <td class="num">2</td>
+              <th scope="row">Jaringan Komputer</th>
+              <td class="num">D</td>
+              <td class="num">3</td>
+              <td class="num">5</td>
+              <td>Cecep Nurul Alam M.T.</td>
+            </tr>
+            <tr>
+              <td class="num">3</td>
+              <th scope="row">Pengembangan Aplikasi Web</th>
+              <td class="num">D</td>
+              <td class="num">3</td>
+              <td class="num">5</td>
+              <td>Muhammad Deden Firdaus ST, M.Kom.</td>
+            </tr>
+            <tr>
+              <td class="num">4</td>
+              <th scope="row">Interaksi Manusia dan Komputer</th>
+              <td class="num">D</td>
+              <td class="num">3</td>
+              <td class="num">5</td>
+              <td>Dr. Cevy Sigalingging S.T., M.Kom.</td>
+            </tr>
+            <tr>
+              <td class="num">5</td>
+              <th scope="row">Intelegensi Buatan</th>
+              <td class="num">D</td>
+              <td class="num">3</td>
+              <td class="num">5</td>
+              <td>Jumadi ST., M.CS.</td>
+            </tr>
+            <tr>
+              <td class="num">6</td>
+              <th scope="row">Manajemen Proyek Perangkat Lunak</th>
+              <td class="num">D</td>
+              <td class="num">3</td>
+              <td class="num">5</td>
+              <td>Agung Wahana S.E., M.T.</td>
+            </tr>
+            <tr>
+              <td class="num">7</td>
+              <th scope="row">Pengembangan Aplikasi Mobile</th>
+              <td class="num">D</td>
+              <td class="num">3</td>
+              <td class="num">5</td>
+              <td>H. Aldy Rialdy Atmadja M.T.</td>
+            </tr>
+            <tr>
+              <td class="num">8</td>
+              <th scope="row">Kewirausahaan &amp; Etika Bisnis</th>
+              <td class="num">A</td>
+              <td class="num">2</td>
+              <td class="num">7</td>
+              <td>Adam Farogi ST., MT.</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" colspan="3">Total SKS</th>
+              <td class="num">23</td>
+              <td colspan="2"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <section id="kontak" aria-labelledby="judul-kontak">
+      <h2 id="judul-kontak">Kontak</h2>
+      <ul class="contact-list">
+        <li>
+          <a class="contact-link" href="mailto:riamelisa30@gmail.com">
+            <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span>Email<span class="sr-only"> Ria Melisa</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="contact-link" href="https://www.instagram.com/_siotria" target="_blank" rel="noopener noreferrer">
+            <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg>
+            <span>Instagram<span class="sr-only"> Ria Melisa (membuka tab baru)</span></span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Ria Melisa</p>
+    </div>
+  </footer>
 </body>
 </html>
