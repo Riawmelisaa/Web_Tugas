@@ -1,19 +1,20 @@
 /* ==========================================================
    Design tokens
-   Palet blueberry lembut.
+   Palet dari foto: biru hijab, teal ornamen gedung, kuning papan.
    ========================================================== */
 :root {
-  --bg: #f8f6fc;
+  --bg: #f1f5fc;
   --surface: #ffffff;
-  --ink: #2e2942;
-  --muted: #68627a;
-  --navy: #4b3d78;
-  --blue: #7569a6;
-  --blue-soft: #eae6f5;
-  --lilac: #f1edf8;
-  --teal: #8b7cb1;
-  --teal-soft: #eeeaf7;
-  --border: #e4dfef;
+  --ink: #1b2740;
+  --muted: #5c6a84;
+  --navy: #2b4573;
+  --blue: #4a6fa5;
+  --blue-soft: #e3ebf9;
+  --lilac: #ece6fa;
+  --teal: #1f7a6e;
+  --teal-soft: #dcf0ec;
+  --sun: #f2c823;
+  --border: #dde5f2;
 
   --font-body: "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
@@ -195,8 +196,8 @@ main > .hero {
   height: clamp(7rem, 22vw, 10rem);
   margin-inline: calc(var(--space) * -1);
   background:
-    radial-gradient(18rem 10rem at 85% 0%, rgba(211, 199, 238, 0.7), transparent 70%),
-    linear-gradient(120deg, #4b3d78, #7569a6 55%, #9484bd);
+    radial-gradient(18rem 10rem at 85% 0%, rgba(242, 200, 35, 0.35), transparent 70%),
+    linear-gradient(120deg, var(--navy), var(--blue) 55%, var(--teal));
 }
 
 .avatar {
@@ -337,6 +338,135 @@ tfoot td {
 }
 
 .num { text-align: center; width: 1%; white-space: nowrap; }
+
+/* ---------- Proyek ---------- */
+.project-list {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.project-card {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1rem;
+  background: #f7f9fe;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.project-thumb {
+  display: block;
+  align-self: start;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-thumb:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(43, 69, 115, 0.15);
+}
+
+.project-thumb img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+}
+
+.project-body h3 {
+  margin-bottom: 0.15rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.project-meta {
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  padding: 0.1rem 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--teal);
+  background: var(--teal-soft);
+  border-radius: 999px;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-card .btn {
+  padding: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+}
+
+.tech-details {
+  margin-top: 1rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+}
+
+.tech-details summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.tech { margin: 0.5rem 0 0; }
+
+.tech div {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.tech div:last-child { border-bottom: 0; }
+
+.tech dt {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.tech dd {
+  margin: 0.1rem 0 0;
+  font-size: 0.88rem;
+  color: var(--ink);
+}
+
+code {
+  padding: 0.1rem 0.4rem;
+  font-size: 0.88em;
+  background: var(--blue-soft);
+  border-radius: 6px;
+}
+
+@media (min-width: 720px) {
+  .project-card { grid-template-columns: minmax(0, 17rem) 1fr; }
+}
 
 /* ---------- Kontak ---------- */
 .contact-list {
