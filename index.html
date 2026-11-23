@@ -200,12 +200,49 @@
 
             <details class="tech-details">
               <summary>Teknologi yang saya gunakan</summary>
-              <p>Penjelasan singkat teknologi yang saya gunakan:</p>
               <dl class="tech">
-                <div><dt>Git &amp; GitHub</dt><dd>Digunakan untuk menyimpan, melacak, dan mengelola versi kode proyek.</dd></div>
-                <div><dt>npm</dt><dd>Digunakan untuk mengelola paket serta menjalankan perintah pengembangan aplikasi.</dd></div>
-                <div><dt>TypeScript</dt><dd>Digunakan untuk menulis kode JavaScript agar lebih terstruktur dan mudah diperiksa.</dd></div>
-                <div><dt>Vite</dt><dd>Digunakan untuk menjalankan dan membangun aplikasi web dengan cepat.</dd></div>
+                <div><dt>Git &amp; GitHub</dt><dd>Mencatat riwayat kode lewat commit dan branch, lalu digabung melalui Pull Request. Konflik diselesaikan sebelum merge.</dd></div>
+                <div><dt>npm</dt><dd>Mengelola paket dan skrip (<code>dev</code>, <code>build</code>) lewat <code>package.json</code>.</dd></div>
+                <div><dt>TypeScript</dt><dd>JavaScript dengan tipe data, sehingga kesalahan terdeteksi sebelum aplikasi berjalan.</dd></div>
+                <div><dt>Vite</dt><dd>Menyediakan server pengembangan yang cepat dan membuat build produksi.</dd></div>
+                <div><dt>Variabel lingkungan</dt><dd>Nama dan versi aplikasi dibaca dari <code>.env</code> yang tidak diunggah ke GitHub. Tidak ada data rahasia.</dd></div>
+                <div><dt>Compiler, transpiler, bundler</dt><dd><code>tsc</code> memeriksa tipe, esbuild mengubah TypeScript menjadi JavaScript, dan Rollup menggabungkan modul menjadi file ringan.</dd></div>
+              </dl>
+            </details>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="project-thumb" href="https://planner-kuliah-react.vercel.app" target="_blank" rel="noopener noreferrer">
+            <img src="proyek-planner-react.jpg" width="900" height="979" loading="lazy"
+                 alt="Tampilan aplikasi Planner Kuliah berisi kartu daftar tugas, kalender, kebiasaan, catatan, dan target">
+            <span class="sr-only">Buka aplikasi Planner Kuliah (membuka tab baru)</span>
+          </a>
+          <div class="project-body">
+            <h3>Planner Kuliah</h3>
+            <p class="project-meta">Pengembangan Aplikasi Web &middot; Tugas React</p>
+            <p>Planner untuk mengatur kegiatan kuliah dalam satu dasbor: tugas, kalender tenggat, kebiasaan harian, catatan, dan target.</p>
+
+            <ul class="tags" aria-label="Teknologi yang digunakan">
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>Vite</li>
+              <li>Git &amp; GitHub</li>
+            </ul>
+
+            <ul class="link-row">
+              <li><a class="btn btn-primary" href="https://planner-kuliah-react.vercel.app" target="_blank" rel="noopener noreferrer">Buka Aplikasi<span class="sr-only"> (membuka tab baru)</span></a></li>
+              <li><a class="btn btn-outline" href="https://github.com/Riawmelisaa/planner-kuliah-react" target="_blank" rel="noopener noreferrer">Kode GitHub<span class="sr-only"> (membuka tab baru)</span></a></li>
+            </ul>
+
+            <details class="tech-details">
+              <summary>Penjelasan komponen React</summary>
+              <dl class="tech">
+                <div><dt>Komponen</dt><dd>Tampilan dipecah menjadi 13 komponen di file terpisah, misalnya <code>TaskWidget</code>, <code>Calendar</code>, dan <code>HabitWidget</code>. <code>Widget</code>, <code>Button</code>, <code>Badge</code>, dan <code>ProgressBar</code> dipakai ulang di banyak tempat.</dd></div>
+                <div><dt>Props</dt><dd>Data dan fungsi dikirim dari komponen induk <code>App</code> ke komponen anak, misalnya <code>tasks</code> dan <code>onToggle</code> yang diteruskan sampai ke <code>TaskItem</code>.</dd></div>
+                <div><dt>State (<code>useState</code>)</dt><dd>Menyimpan data yang bisa berubah: daftar tugas, filter, tanggal yang dipilih di kalender, dan isi formulir. Data disimpan ke browser lewat custom hook.</dd></div>
+                <div><dt>Event handling</dt><dd>Klik tombol, centang tugas, memilih tanggal, dan mengirim formulir memanggil fungsi di <code>App</code> yang mengubah state.</dd></div>
+                <div><dt>Conditional dan list rendering</dt><dd>Pesan kosong, banner tanggal, dan lencana sisa hari tampil sesuai kondisi. Daftar tugas, hari di kalender, dan catatan dibuat dengan <code>map()</code> dan <code>key</code>.</dd></div>
               </dl>
             </details>
           </div>
